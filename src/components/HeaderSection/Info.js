@@ -19,19 +19,18 @@ const Info = () => {
       });
   }, []);
 
-  console.log(data);
-  //   console.log(icons);
+  //   console.log(data);
 
   return (
     <div className="container py-5">
       <div className="row">
         {data?.map((d) => (
-          <div class="col-md-4 ">
-            <div class="card text-center">
-              <div class="card-body">
-                <img src={icons} class="card-img-top" alt="..." />
-                <h5 class="card-title">{d.description}</h5>
-                <p class="card-text">{d.title}</p>
+          <div className="col-md-4 ">
+            <div className="card text-center">
+              <div className="card-body">
+                <img src={icons} className="card-img-top" alt="..." />
+                <h5 className="card-title">{d.description}</h5>
+                <p className="card-text">{d.title}</p>
                 {d.id}
               </div>
             </div>
