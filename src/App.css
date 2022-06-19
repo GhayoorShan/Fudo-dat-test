@@ -2,37 +2,55 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  height: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bg-colored {
+  background-color: #faf7f2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-yellow {
+  background-color: #fdc913 !important;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-heading {
+  font-family: "Martel", serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: #292929;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-subtitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.grass-img {
+  width: 20%;
+}
+
+.signup-heading {
+  font-family: "Manrope", serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: #292929;
+}
+
+.signup-subtitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.signup-form-heading {
+  font-family: "Manrope", serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ce2829;
 }
