@@ -1,3 +1,5 @@
+![Fudo](https://user-images.githubusercontent.com/38887731/174510997-d1ee6a5f-6176-413e-acb7-7f633d7c00ae.PNG)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
