@@ -102,3 +102,9 @@ button:focus,
 .card-rounded {
   border-radius: 50px;
 }
+.my-cart {
+  min-width: 400px;
+}
+.cart-buttons-row {
+  align-items: center;
+}
