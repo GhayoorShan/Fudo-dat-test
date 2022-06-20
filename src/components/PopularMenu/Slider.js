@@ -2,10 +2,13 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Slider.css";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { useCart } from "react-use-cart";
 
 const SliderOne = ({ categoryItem }) => {
-  //   const sliderRef = useRef();
+  const { addItem } = useCart();
+
+  console.log(addItem);
 
   const settings = {
     dots: false,
@@ -17,40 +20,33 @@ const SliderOne = ({ categoryItem }) => {
 
   return (
     <div>
-      {/* <div>
-        <button
-          onClick={() => {
-            sliderRef.current.slickPrev();
-          }}
-        >
-          <KeyboardArrowLeftIcon />
-        </button>
-        <button
-          onClick={() => {
-            sliderRef.current.slickNext();
-          }}
-        >
-          <KeyboardArrowRightIcon />
-        </button>
-      </div> */}
       <div className="container">
         <Slider {...settings}>
           {categoryItem &&
             categoryItem.map((item) => (
               <div className="col " key={item.id}>
-                <div className="card  mx-2">
+                <div className="card mx-2 ">
                   <img
                     src={item.image}
-                    height={250}
-                    className="card-img-top"
+                    height={200}
+                    className="rounded-top"
                     alt="..."
                   />
-                  <div className="card-body">
-                    <h5 className="card-title">{item.title}</h5>
-                    <p className="card-text">
+                  <div className="card-body  bg-colored">
+                    <p className="card-font">{item.title}</p>
+                    <p className="card-font">
                       {item.currency} {item.price}
                     </p>
-                    <button className="btn p-0">Add to Cart</button>
+                    <button
+                      className="btn p-0 card-font"
+                      onClick={() => addItem(item)}
+                    >
+                      Add to Cart
+                      <ShoppingCartOutlinedIcon
+                        className="mx-3"
+                        fontSize="small"
+                      />
+                    </button>
                   </div>
                 </div>
               </div>

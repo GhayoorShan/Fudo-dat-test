@@ -5,7 +5,7 @@ import Info from "./Info";
 
 const index = () => {
   return (
-    <div className="bg-colored ">
+    <div className="bg-colored">
       <Header />
       <Hero />
       <Info />

@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assests/Logo.png";
+import Cart from "./Cart";
 
 const Header = () => {
   return (
@@ -29,10 +30,9 @@ const Header = () => {
             </li>
           </ul>
 
-          <div className="col-md-3 text-end">
-            {/* <button type="button" className="btn ">
-              Login
-            </button> */}
+          <div className="col-md-3 text-end d-flex">
+            <Cart />
+
             <button
               type="button"
               className="btn btn-yellow rounded-pill px-4 py-2"

@@ -33,6 +33,13 @@
 .grass-img {
   width: 20%;
 }
+.custom-bg:nth-child(even) {
+  background-color: #fdc913 !important;
+}
+
+.info-section {
+  margin-bottom: 100px;
+}
 
 .signup-heading {
   font-family: "Manrope", serif;
@@ -58,9 +65,10 @@
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
+button:focus,
 .uneditable-input:focus {
   border-color: #fdc913;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .menu-tab-font {
@@ -82,4 +90,15 @@ input[type="email"]:focus,
   right: -50px !important;
   z-index: 10;
   background-color: black !important;
+}
+
+.card-font {
+  font-family: "Martel", serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #666666;
+}
+
+.card-rounded {
+  border-radius: 50px;
 }

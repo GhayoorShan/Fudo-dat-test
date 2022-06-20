@@ -6,8 +6,10 @@ const Menu = () => {
   const [slug, setSlug] = useState("pizza");
   const [categoryItem, setCategoryItem] = useState("");
 
+  const url = "http://54.169.31.224:3000/category/";
+
   useEffect(() => {
-    fetch("http://54.169.31.224:3000/category")
+    fetch(url)
       .then((resp) => resp.json())
       .then((apiData) => {
         apiData.data.forEach((d) => {
@@ -18,18 +20,14 @@ const Menu = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`http://54.169.31.224:3000/category/${slug}`)
+    fetch(`${url}${slug}`)
       .then((resp) => resp.json())
       .then((apiData) => {
         apiData.data.forEach((item) => {
           item.image = item.image.replace("localhost", "54.169.31.224");
         });
 
-        // if (apiData.data.length < 4)
-        //   apiData.data = { ...apiData.data, ...apiData.data };
-
         setCategoryItem(apiData.data);
-        console.log(apiData.data);
       });
   }, [slug]);
 
