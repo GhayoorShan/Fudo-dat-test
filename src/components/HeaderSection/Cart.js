@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useCart } from "react-use-cart";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 const Cart = () => {
+  const [show, setShow] = useState(false);
   const {
     isEmpty,
     totalUniqueItems,
@@ -21,10 +22,11 @@ const Cart = () => {
         <button
           type="button"
           className="btn position-relative px-4 "
-          id="dropdownMenuButton"
+          id="dropdownMenuClickableInside"
           data-bs-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
+          data-bs-auto-close="outside"
         >
           <ShoppingCartOutlinedIcon fontSize="large" />
           <span class="position-absolute top-0 start-80 translate-middle badge rounded-pill bg-danger">
@@ -32,7 +34,10 @@ const Cart = () => {
             <span class="visually-hidden">Added to cart</span>
           </span>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div
+          class="dropdown-menu"
+          aria-labelledby="dropdownMenuClickableInside"
+        >
           {isEmpty ? (
             <h3 className="text-center"> Your cart is Empty </h3>
           ) : (
@@ -99,7 +104,7 @@ const Cart = () => {
                 </div>
                 <div className="d-grid ">
                   <button onClick={buy} className="btn ms-2 btn-yellow">
-                    Check out ${cartTotal}
+                    Check out ${cartTotal.toFixed(2)}
                   </button>
                 </div>
               </div>
